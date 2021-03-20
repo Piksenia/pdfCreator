@@ -5,4 +5,8 @@ Generate static templates with dynamic attributes from java objects to create pd
  2) Generate html with list of objects
  3) Convert rendered html
  
+ For local start:
+ - simple test with single java objects (hard coded in project), call http://localhost:8080/api/profile/piksenia or simple http://localhost:8080/api/profile/anyName
+ - simple test with multiple java objects (hard coded as well with default values), call http://localhost:8080/api/profile/
+ 
  ATTENTION: Margin and padding in percent aren't supported by converter
