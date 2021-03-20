@@ -1,13 +1,17 @@
-package com.piksenia.thymeleaf.pdfCreator;
+package com.piksenia.thymeleaf.pdfCreator.servicescontrollers;
 
+import com.piksenia.thymeleaf.pdfCreator.models.Evaluation;
+import com.piksenia.thymeleaf.pdfCreator.models.Profile;
+import com.piksenia.thymeleaf.pdfCreator.models.Skill;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ProfileCreationService {
 
-    protected Profile generateContent(String profileName){
+    private Profile generateContent(String profileName){
         Profile profile = new Profile();
 
         if(profileName.equals("piksenia")){
@@ -28,6 +32,14 @@ public class ProfileCreationService {
             profile.setJob("Default Developer");
         }
         return profile;
+    }
+
+    protected List<Profile> initializeProfiles(List<String> profileNames){
+        List<Profile> profileList = new ArrayList<>();
+        for(String profile: profileNames){
+            profileList.add(generateContent(profile));
+        }
+        return profileList;
     }
 
 }

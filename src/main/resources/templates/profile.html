@@ -3,8 +3,30 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link th:href="@{/css/general.css}" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-
+        <div id="profileContainer" class="profileContainer" th:each="profile: ${profileList}">
+            <div id="overviewLeftContainer" class="overviewLeftContainer">
+                <div id="picture" class="picture">
+                    <img th:src="'data:image/png;base64, '+${profile.pictureBase64}"}>
+                </div>
+                <div id="baseInformation" class="baseInformation">
+                    <p th:text="${profile.username}"></p>
+                    <p th:text="${profile.age}"></p>
+                </div>
+            </div>
+            <div id="overviewRightContainer" class="overviewRightContainer">
+                <p th:text="${profile.motto}"></p>
+                <p th:text="${profile.job}"></p>
+                <table>
+                    <tbody>
+                        <tr th:each = "skill : ${profile.skillList}">
+                            <td th:text="${skill.name} + ' '+ ${skill.evaluation.levelLabel}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
 </html>

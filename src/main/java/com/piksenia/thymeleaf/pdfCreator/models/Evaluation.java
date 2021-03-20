@@ -1,4 +1,4 @@
-package com.piksenia.thymeleaf.pdfCreator;
+package com.piksenia.thymeleaf.pdfCreator.models;
 
 import lombok.AllArgsConstructor;
 
@@ -9,7 +9,7 @@ public enum Evaluation {
     GOOD(3, "Already done some things with it, excited to learn more!", "sheriff"),
     EXCELLENT(4, "I find solutions for every problem, leave it to me!", "hero");
 
-    private final int level;
-    private final String levelDescription;
-    private final String levelLabel;
+    public final int level;
+    public final String levelDescription;
+    public final String levelLabel;
 }

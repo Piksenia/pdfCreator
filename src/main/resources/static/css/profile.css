@@ -1,0 +1,39 @@
+.profileContainer{
+    border: 1px solid black; 
+    width: 500px; 
+    height: 300px;
+}
+
+.overviewLeftContainer{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.overviewRightContainer{
+    width: 50%;
+    height: 95%;
+    float: left;
+    padding: 1px 1px 1px 5px;
+}
+
+.picture{
+    width: 70%;
+    height: 60%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.picture img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.baseInformation{
+    width: 70%;
+    height: 20%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+

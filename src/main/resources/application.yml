@@ -1,6 +1,4 @@
-app:
-  base-url: http://localhost:${server.port:8080}
-
 spring:
   thymeleaf:
     cache: false
+    check-template-location: false
